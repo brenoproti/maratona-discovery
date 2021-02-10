@@ -1,8 +1,31 @@
+/* DARK MODE */
+:root.dark {
+    --green: rgb(1, 255, 60);
+    --bg: #1a1a1a;
+    --header: #252525;
+    --card: rgb(58, 58, 58);
+    --dark-blue: #ffffff;
+    --card-total: #053811;
+    --color-table: rgb(255, 255, 255);
+    --description: rgb(255, 255, 255);
+    --table-bg: rgb(78, 78, 78);
+    --btn-hover: rgb(78, 78, 78);
+    --red: #8b1b1b;
+}
+
 /* GLOBAL */
 :root {
     --dark-blue: #363f5f;
+    --description: #363f5f;
     --green: #217c00;
     --red: #e92929;
+    --bg: #d3d3d3;
+    --header: #2d4a22;
+    --card: #fff;
+    --table-bg: #fff;
+    --btn-hover: rgb(184, 184, 184);
+    --card-total: #56973e;
+    --color-table: #9096ad;
 }
 
 * {
@@ -16,7 +39,7 @@ html {
 }
 
 body {
-  background: #d3d3d3;
+  background: var(--bg);
   font-family: "Poppins", sans-serif;
 }
 
@@ -38,6 +61,12 @@ body {
 }
 
 /* TITLES */
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 h2 {
     margin-top: 3.2rem;
     margin-bottom: .8rem;
@@ -51,17 +80,37 @@ a {
     color: var(--green);
     text-decoration: none;
 }
+
+img.dark-mode {
+    width: 30px;
+}
 a:hover {
     color: #2da800;
 }
-
+button.dark-ligth{
+    width: 29px;
+    height: 29px;
+    position:fixed;
+    left: 10px;
+    top: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    border-radius: 50%;
+}
+button.dark-ligth:hover {
+    background: var(--btn-hover);
+}
 button {
     width: 100%;
     height: 50px;
 
     border: none;
     color: #fff;
-    background: var(--green);
+    background: var(--card-total);
 
     padding: 0;
 
@@ -104,7 +153,7 @@ button:hover {
 
 /* HEADER */
 header {
-  background: #2d4a22;
+  background: var(--header);
   padding: 2rem 0 10rem;
   text-align: center;
 }
@@ -130,7 +179,7 @@ header {
 
 /* CARDS */
 .card {
-    background: #fff;
+    background: var(--card);
     padding: 1.5rem 2rem;
     border-radius: .25rem;
 
@@ -156,7 +205,7 @@ header {
 }
 
 .card.total {
-    background: #56973e;
+    background: var(--card-total);
     color: #fff;
 }
 
@@ -170,7 +219,7 @@ header {
 #data-table {   
     width: 100%;
     border-spacing: 0 .5rem;
-    color: #9096ad; 
+    color: var(--color-table); 
 }
 
 table thead tr td:first-child,
@@ -193,7 +242,7 @@ table tbody tr:hover {
 }
 
 table th {
-    background: #fff;
+    background: var(--table-bg);
 
     font-weight: normal;
     padding: 1rem 2rem;
@@ -201,12 +250,12 @@ table th {
 }
 
 table tbody td{
-    background: #fff;
+    background: var(--table-bg);
     padding: 1rem 2rem;
 }
 
 td.description {
-    color: var(--dark-blue);
+    color: var(--description);
 }
 
 td.income {
@@ -247,7 +296,7 @@ tr td img {
 }
 
 .modal {
-    background: #dbdee0;
+    background: var(--bg);
     padding: 2.4rem;
 
 }

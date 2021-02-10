@@ -95,7 +95,7 @@ const DOM = {
         if(Transaction.total() < 0) {
             totalCard.style.backgroundColor = 'var(--red)'
         } else {
-            totalCard.style.backgroundColor = '#56973e'
+            totalCard.style.backgroundColor = 'var(--card-total)'
         }
 
     }
@@ -196,6 +196,11 @@ const App = {
     },
 }
 
+const btnMode = document.querySelector('button.dark-ligth');
+btnMode.addEventListener('click',() => {
+    const pageHtml = document.querySelector('html');
+    pageHtml.classList.toggle('dark');
+})
 
 App.init();
 
